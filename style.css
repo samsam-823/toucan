@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #f2e3bc;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Lato", sans-serif;
+}
+button {
+  background-color: #9a8865;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #ddc8a2;
+  transition-duration: 0.5s;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+}
+
+a.active {
+  background-color: grey;
+}

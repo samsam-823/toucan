@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+<body>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+		</style>
+		</head>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Aboutus.html">About Us</a></li>
+  <li><a href="contactus.html">Contact Us</a></li>
+  <li><a href="signup.html">Sign Up</a></li>
+  <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+  <li><a href="signuptovolunteer.html">Sign Up to Volunteer</a></li>
+</ul>
+<style>
+  .row:nth-child(1) 
+    {background: gold;}
+  .row:nth-child(2) 
+    {background: #c0c0c0;}
+  .row:nth-child(3) 
+    {background: #cd7f32;}
+  #container {
+    width: 600px;
+    height: auto;
+  }
+
+  .row {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #AFAFAF;
+  }
+
+  .name {
+    position: relative;
+    display: inline-block;
+    width: 75%;
+    line-height: 45px;
+  }
+
+  .score {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+  }
+
+  .row:nth-child(1) {
+    background: gold;
+    font-family: "Lato", sans-serif;
+  }
+
+  .row:nth-child(2) {
+    background: #c0c0c0;
+    font-family: "Lato", sans-serif;
+  }
+
+  .row:nth-child(3) {
+    background: #cd7f32;
+    font-family: "Lato", sans-serif;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  let elements = []
+  let container = document.querySelector('#container')
+  container.querySelectorAll('.row').forEach(el => elements.push(el))
+  container.innerHTML = ''
+  elements.sort((a, b) => b.querySelector('.score').textContent - a.querySelector('.score').textContent)
+  elements.forEach(e => container.appendChild(e))
+})
+</script>
+  <br>
+  <br>
+  <br>
+<h3>Leaderboard</h3>
+  <div id="container">
+
+  <div class="row">
+    <div class="name">Player2</div><div class="score">580</div>
+  </div>
+
+  <div class="row">
+    <div class="name">Player4</div><div class="score">500</div>
+  </div>
+
+  <div class="row">
+    <div class="name">Player5</div><div class="score">495</div>
+  </div>
+</div>
+  <!--btw the when the score changes the order also changes-->
+<p>explanation go here</p>
+</body>
+</html>
